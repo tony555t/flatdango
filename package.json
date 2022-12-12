@@ -1,0 +1,27 @@
+{
+  "name": "flatdango",
+  "version": "1.0.0",
+  "description": "mini movie app",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tony555t/flatdango.git"
+  },
+  "keywords": [
+    "movie",
+    "ticketing",
+    "javascript",
+    "bootstrap",
+    "css",
+    "html"
+  ],
+  "author": "antony tula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tony555t/flatdango/issues"
+  },
+  "homepage": "https://github.com/tony555t/flatdango#readme"
+}
