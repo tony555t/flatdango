@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         displayMovieDetails()
     }
 
-    // click to dsplay movie details
+    
     const displayMovieDetails = () =>{
         let children = navBar.children
         // console.log(children)
