@@ -13,12 +13,17 @@
   </head>
   <body>
     <!-- navbar -->
+    <nav class="navbar bg-yellow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+      </div>
+    </nav>
     <div class="heading">
       <div class="item">
         <h2 class="ui header">
-          <i class="orange ticket icon"></i>
+         <i class="bi bi-film"></i>
           <div class="content">FLATDANGO</div>
-          <div class="sub header" id="subtitle">BUY MOVIE TICKETS</div>
+          <div class="sub header" id="subtitle">AVAILABLE MOVIES TO WATCH</div>
         </h2>
       </div>
     </div>
@@ -28,36 +33,40 @@
         <div class="list-container">
           <!-- side menu -->
           <ul class="ui divided list" id="films">
-            <li class="film item">Movie titles will go here.</li>
+            <li class="film item">MOVIES .</li>
+            <li>The Giant Gila Monster</li>
+            <li>Manos: The Hands Of Fate</li>
+            <li>The Touch Of Satan</li>
+            <li>Time Chasers</li>
+            <li>Santa Claus Conquers The Martians</li>
+            <li>rack Of The Moon Beast</li>
           </ul>
         </div>
       </div>
 
       <!-- poster -->
       <div class="four wide column">
-        <img
-          id="poster"
-          src="assets/placeholderImage.png"
-          alt="[MOVIE TITLE]"
-        />
+        <img src= "https://www.gstatic.com/tv/thumb/v22vodart/23342/p23342_v_v8_ab.jpg" width="300" 
+        height="400">
+        An inventor comes up with a time machine, but must prevent its abuse at the hands of an evil C.E.O.
+        
       </div>
 
       <!-- showing info -->
       <div class="four wide column">
         <div class="ui cards" id="showing">
           <div class="card">
-            <div id="title" class="title">[MOVIE TITLE] <span id="film-idv" ></span></div>
-            <div  id="runtime" class="meta"><span id="run-time"> [RUNTIME] </span> minutes</div>
+            <div id="title" class="title">Time  Chasers <span id="film-idv" ></span></div>
+            <div  id="runtime" class="meta"><span id="run-time"> [93] </span> minutes</div>
             <div class="content">
               <div class="description">
-                <div id="film-info">[INSERT MOVIE DESCRIPTION HERE]</div>
-                <span id="showtime" class="ui label">[SHOWTIME]</span>
-                <span id="ticket-num">[X]</span> remaining tickets
+                <div id="film-info">An inventor comes up with a time machine, but must prevent its abuse at the hands of an evil C.E.O</div>
+                <span id="ticket-num">[19]</span> remaining tickets
               </div>
             </div>
             <div class="extra content">
-              <button id="buy-ticket" class="ui orange button">
-                Buy Ticket
+              <button id="get-ticket" class="ui bg-yellow button">
+                get Ticket
               </button>
             </div>
           </div>

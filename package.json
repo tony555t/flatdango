@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/tony555t/flatdango/issues"
   },
-  "homepage": "https://github.com/tony555t/flatdango#readme"
+  "homepage": "https://github.com/tony555t/flatdango#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.10.2"
+  }
 }
