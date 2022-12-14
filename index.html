@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flatdango</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flatdango</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.css"><title>Flatdango</title>
 </head>
+
 <body>
-    
-    <div class="container-fluid">
-        <div class="row">
-          <!--vertical nav-bar section -->
-          <div class="col-3">
-            <div class="navbar navbar-dark bg-light ">
-              <ul class="navbar-nav lh-lg" id="movies-list">
-                <li class="nav-item">
-                  <a href="" class="nav-link">[list of movies will go here]</a>
-                </li>
-              </ul>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!--vertical nav-bar section -->
+      <div class="col-3">
+        <div class="navbar navbar-dark bg-light ">
+          <ul class="navbar-nav lh-lg" id="movies-list">
+            <li class="nav-item">
+              <a href="" class="nav-link">[list of movies will go here]</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- card image and details section -->
+      <div class="col-9">
+        <div class="card" id="showing">
+          <img id="poster" class="card-image-top" style="height: 350px; width: auto;"
+            src="pexels-david-gomes-2752777.jpg" alt="[MOVIE TITLE]" width="100" height="600" />
+          <div class="card-body ">
+
+            <div id="title" class="card-title text-uppercase fs-2">[MOVIE TITLE]</div>
+            <div id="description" class="card-text mb-2 fst-italic">[INSERT MOVIE DESCRIPTION HERE]</div>
+            <div class="list-group list-group-flush  d-flex flex-row mt-1 justify-content-evenly mb-2">
+              <span id="runtime" class=" flex-fill ">[RUNTIME]</span>
+              <span id="showtime" class=" flex-fill">[SHOWTIME]</span>
+
+            </div>
+            <div class="d-flex flex-row justify-content-evenly">
+              <span id="available-ticket" class="flex-fill justify-content-evenly">AVAILABLE TICKET</span>
+              <span id="buy-ticket" class=" btn btn-outline-secondary flex-fill justify-content-evenly">[BUY
+                TICKET]</span>
             </div>
           </div>
-            <!-- card image and details section -->
-          <div class="col-9">
-              <div class="card" id="showing">
-                <img id="poster"  class="card-image-top" style="height: 350px; width: auto;"
-                     src="[MOVIE POSTER]"
-                     alt="[MOVIE TITLE]" 
-                     /> 
-                <div class="card-body ">
-              
-                  <div id="title" class="card-title text-uppercase fs-2">[MOVIE TITLE]</div>
-                  <div id="description" class="card-text mb-2 fst-italic" >[INSERT MOVIE DESCRIPTION HERE]</div>
-                  <div class="list-group list-group-flush  d-flex flex-row mt-1 justify-content-evenly mb-2">
-                    <span id="runtime" class=" flex-fill ">[RUNTIME]</span>
-                    <span id="showtime" class=" flex-fill">[SHOWTIME]</span>
-
-                  </div>
-                    <div class="d-flex flex-row justify-content-evenly">
-                    <span id="ticketnum"  class="flex-fill justify-content-evenly">TICKET</span>
-                    <span id="buy-ticket" class=" btn btn-outline-secondary flex-fill justify-content-evenly">[BUY TICKET]</span>
-                    </div> 
-                </div>
-              </div>
-          
-            </div>
-              
         </div>
-          
+
+      </div>
+
     </div>
-              
-    
-<script src="js/bootstrap.js"></script>
-<script src="js/index.js"></script>
+
+  </div>
+
+
+  <script src="js/bootstrap.js"></script>
+  <script src="js/index.js"></script>
 </body>
+
 </html>
