@@ -1,6 +1,5 @@
-// first movie fetch url
-const url1 = 'http://localhost:3000/films/1' 
-// all movies fetch url
+
+//const url1 = 'http://localhost:3000/films/1' 
 let url = 'http://localhost:3000/films'
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -10,20 +9,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
     // get first movie details
     const fetchData1 = () => {
     fetch(url1).then(res => res.json())
-    .then(firstMovie => {
+    .then(movieOne => {
         const movie1 =  document.getElementById('poster')
         console.log(movie1)
-        movie1.src = firstMovie.poster
+        movie1.src = fMovie.poster
         const movie1Title = document.querySelector('#title');
-        movie1Title.textContent = firstMovie.title;
+        movie1Title.textContent = movieOne.title;
         const movie1Time = document.querySelector('#runtime');
-        movie1Time.textContent = `${firstMovie.runtime} minutes`;
+        movie1Time.textContent = `${movieone.runtime} minutes`;
         const movie1Description = document.querySelector('#description');
-        movie1Description.textContent = firstMovie.description;
+        movie1Description.textContent = movieOne.description;
         const showTime = document.querySelector('#showtime')
-        showTime.textContent = firstMovie.showtime;
+        showTime.textContent = movieOne.showtime;
         const tickets  = document.querySelector('#ticketnum')
-        tickets.textContent = firstMovie.capacity - firstMovie.tickets_sold;
+        tickets.textContent = movieOne.capacity - MovieOne.tickets_sold;
         const btn = document.getElementById('buy-ticket')
         btn.textContent = 'buy movie'
 
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     const navBar = document.getElementById('movies-list')
 
-    //Create fetch function
+    //fetch function
     const fetchAllMovies = url => {
         fetch(url).then(res => res.json())
         .then(movies => {
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
     }
 
-    // display movies lists in the menu 
+    // movies lists 
     const displayAllMovies = movie => {
     
         const li = document.createElement('li')
@@ -55,11 +54,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
     const displayMovieDetails = () =>{
         let children = navBar.children
-        // console.log(children)
+    
 
         for(let i=0; i<children.length; i++){
             let child = children[i]
-            // console.log(child)
+        
 
             child.addEventListener('click',() => {
                 fetch(`${url}/${i+1}`)
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             })
         }
     }
-    // create movie details card
+    // details card
     function setUpMovieDetails(childMovie){
         const preview = document.getElementById('poster')
         preview.src = childMovie.poster;
