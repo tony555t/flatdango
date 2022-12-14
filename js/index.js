@@ -3,9 +3,10 @@ const url1 = 'http://localhost:3000/films/1'
 // all movies fetch url
 let url = 'http://localhost:3000/films'
 
+
 document.addEventListener('DOMContentLoaded', ()=>{
 
-    document.getElementsByClassName('nav-item')[0].remove()
+document.getElementsByClassName('nav-item')[0].remove()
 
     // get first movie details
     const fetchData1 = () => {
