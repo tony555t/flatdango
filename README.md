@@ -3,8 +3,8 @@
 Flatdango Movie mini webapp is an online platform that allows a user to purchase movie tickets from the
 theater.
 
-## Live Link
-https://github.com/tony555t/flatdango
+## Link
+https://tony555t.github.io/flatdango/
 
 ## User Story
  The user should be in a position to See the first movie's details, including its poster, title, runtime,showtime, and available tickets when the page loads. The number of
