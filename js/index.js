@@ -1,7 +1,7 @@
 // first movie fetch url
-const url1 = 'http://localhost:3000/films/1' 
+//const url1 = 'http://localhost:3000/films/1' 
 // all movies fetch url
-let url = 'http://localhost:3000/films'
+let url = 'https://flatdango-sage.vercel.app/db.json'
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -10,21 +10,22 @@ document.getElementsByClassName('nav-item')[0].remove()
 
     // get first movie details
     const fetchData1 = () => {
-    fetch(url1).then(res => res.json())
+    fetch(url).then(res => res.json())
     .then(firstMovie => {
+        console.log(firstMovie.films)
         const movie1 =  document.getElementById('poster')
         console.log(movie1)
-        movie1.src = firstMovie.poster
+        movie1.src = firstMovie.films[0].poster
         const movie1Title = document.querySelector('#title');
-        movie1Title.textContent = firstMovie.title;
+        movie1Title.textContent = firstMovie.films[0].title;
         const movie1Time = document.querySelector('#runtime');
-        movie1Time.textContent = `${firstMovie.runtime} minutes`;
+        movie1Time.textContent = `${firstMovie.films[0].runtime} minutes`;
         const movie1Description = document.querySelector('#description');
-        movie1Description.textContent = firstMovie.description;
+        movie1Description.textContent = firstMovie.films[0].description;
         const showTime = document.querySelector('#showtime')
-        showTime.textContent = firstMovie.showtime;
+        showTime.textContent = firstMovie.films[0].showtime;
         const tickets  = document.querySelector('#available-ticket')
-        tickets.textContent = firstMovie.capacity - firstMovie.tickets_sold;
+        tickets.textContent = firstMovie.films[0].capacity - firstMovie.films[0].tickets_sold;
         const btn = document.getElementById('buy-ticket')
         btn.textContent = 'buy movie'
 
@@ -37,7 +38,7 @@ document.getElementsByClassName('nav-item')[0].remove()
     const fetchAllMovies = url => {
         fetch(url).then(res => res.json())
         .then(movies => {
-            movies.forEach(movie => {
+            movies.films.forEach(movie => {
                 displayAllMovies(movie)
             });
         })
@@ -54,26 +55,52 @@ document.getElementsByClassName('nav-item')[0].remove()
     }
 
     // click to dsplay movie details
-    const displayMovieDetails = () =>{
-        let children = navBar.children
+    ///const displayMovieDetails = () =>{
+       // let children = navBar.children
         // console.log(children)
 
-        for(let i=0; i<children.length; i++){
-            let child = children[i]
+        //for(let i=0; i<children.length; i++){
+          //  let child = children[i]
             // console.log(child)
 
-            child.addEventListener('click',() => {
-                fetch(`${url}/${i+1}`)
+          //  child.addEventListener('click',() => {
+              //  fetch(`${url}/${i+1}`)
 
-                .then(res => res.json())
-                .then(movie => {
-                    document.getElementById('buy-ticket').textContent = 'Buy Ticket'
-                    setUpMovieDetails(movie)
+              //  .then(res => res.json())
+               // .then(movie => {
+                 //   document.getElementById('buy-ticket').textContent = 'Buy Ticket'
+                 //   setUpMovieDetails(movie)
+              //  })
+
+           // })
+        //}
+  //  }
+  const displayMovieDetails = () =>{
+    
+            
+            // let children = navBar.children
+            // // console.log(children)
+    
+            // for(let i=0; i<children.length; i++){
+            //     let child = children[i]
+                // console.log(child)
+    
+                navBar.addEventListener('click',(e) => {
+                    fetch(url)
+    
+                    .then(res => res.json())
+                    .then(movies => {
+                        movies.films.map(movie=>{if(e.target.textContent === movie.title.toUpperCase()){
+                            document.getElementById('buy-ticket').textContent = 'Buy Ticket'
+                            setUpMovieDetails(movie)
+                            }
+
+                        })
+                       
+                    })
+    
                 })
-
-            })
-        }
-    }
+            }
     // create movie details card
     function setUpMovieDetails(childMovie){
         const preview = document.getElementById('poster')
