@@ -1,10 +1,10 @@
 # Code Challenge week3
 # Description
-Flatdango Movie mini webapp is a web app that allows a user to purchase movie tickets from the
+Flatdango Movie mini webapp is an online platform that allows a user to purchase movie tickets from the
 theater.
 
 ## Live Link
-http://127.0.0.1:5501/
+https://github.com/tony555t/flatdango
 
 ## User Story
  The user should be in a position to See the first movie's details, including its poster, title, runtime,showtime, and available tickets when the page loads. The number of
@@ -13,14 +13,23 @@ http://127.0.0.1:5501/
  The user will also be allowed to buy a ticket for a movie. After clicking the "Buy Ticket" button, he  or she  should see the number of available tickets decreasing on the frontend. 
 
 ## Development Requirements
--Visual Studio Code. -LIve Server Extension
+## requirments
+For one to use use this repository ensure you are equiped with the following
 
+-Visual Studio Code. 
+-LIve Server Extension
+-nodejs 9.0+
+-computer that runs on either of the following
 ## Development Installation
 To get the code ..
 
-Clone the repository: git@github.com:tony555t/phase-1-wk2-code-challenge.git
-Move the to the folder and install requirements cd Phase-1-Code-Challenge-Flatdango
-Running the application -Run this command to get the backend started: 
+Clone the repository: https://github.com/tony555t/flatdango
+change directory
+ cd flatdango
+opening in visual studio code
+code .
+## Running the application
+ -Run this command to get the backend started: 
 json-server --watch db.json. -Test your server by visiting this route in the browser:
  http://localhost:3000/characters. -Rightclick on the index file and open live server.
 
@@ -29,9 +38,9 @@ json-server --watch db.json. -Test your server by visiting this route in the bro
 2.CSS 
 3.JavaScript
 Author and License
-"author": "antony tula", 
-"license": "ISC",
- "bugs": { "url":" https://github.com/tony555t/phase-1-wk2-code-challenge" },
-  "homepage": "https://github.com/tony555t/phase-1-wk2-code-challenge" }
-
+## Author
+antony tula
+## license
+ISC
+ 
 
